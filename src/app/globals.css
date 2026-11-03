@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body { height: 100%; background: #02060f; color: #e5f4ff; }
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  background: radial-gradient(ellipse at top, #04182f 0%, #02060f 55%), radial-gradient(ellipse at bottom, #001a2e 0%, #02060f 55%);
+  min-height: 100vh; overflow-x: hidden;
+}
+.grid-overlay {
+  background-image: linear-gradient(rgba(0,229,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,229,255,0.04) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+.glass { background: rgba(5,18,36,0.55); border: 1px solid rgba(0,229,255,0.16); backdrop-filter: blur(14px) saturate(1.2); }
+.glow-text { text-shadow: 0 0 14px rgba(0,229,255,0.6); }
+@keyframes pulse-ring { 0% { transform: scale(0.96); opacity: 0.75; } 75% { transform: scale(1.28); opacity: 0; } 100% { transform: scale(1.28); opacity: 0; } }
+.pulse-ring { animation: pulse-ring 2.1s cubic-bezier(0.2, 0.6, 0.3, 1) infinite; }
+.scan-lines {
+  background-image: repeating-linear-gradient(0deg, rgba(0,229,255,0.03) 0px, rgba(0,229,255,0.03) 1px, transparent 1px, transparent 3px);
+  pointer-events: none;
+}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: rgba(0,229,255,0.25); border-radius: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
