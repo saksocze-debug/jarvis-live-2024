@@ -1,11 +1,11 @@
 'use client';
 import dynamic from 'next/dynamic';
-import { ChatStream } from '@/components/ChatStream';
-import { StatusBar } from '@/components/StatusBar';
-import { VoiceDock } from '@/components/VoiceDock';
-import { UploadZone } from '@/components/UploadZone';
+import { ChatStream } from '../components/ChatStream';
+import { StatusBar } from '../components/StatusBar';
+import { VoiceDock } from '../components/VoiceDock';
+import { UploadZone } from '../components/UploadZone';
 
-const Hologram = dynamic(() => import('@/components/Hologram').then((m) => m.Hologram), { ssr: false });
+const Hologram = dynamic(() => import('../components/Hologram').then((m) => m.Hologram), { ssr: false });
 
 export default function Home() {
   return (
